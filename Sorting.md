@@ -50,3 +50,51 @@ int main()
     return 0;
 }
 ```
+## Selection Sort
+
+```
+void selectionsort(vector<int>&v , int n)
+{
+    for(int i=0 ;i<n ;i++)
+    {
+    int mini=i;
+        for(int j=i+1 ;j<n ;j++)
+        {
+            if(v[j]<v[mini])mini=j;
+        }
+        swap(v[i],v[mini]);
+    }
+}
+
+void print(vector<int>&v,int n)
+{
+    for(int i=0 ;i<n ;i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int>v;
+    for(int i=0 ;i<n ;i++)
+    {
+        int num;
+        cin>>num;
+        v.push_back(num);
+    }
+    cout<<"Before sorting"<<endl;
+    print(v,n);
+    selectionsort(v,n);
+    cout<<"After sorting"<<endl;
+    print(v,n);
+    return 0;
+}
+```
+## Counting Sort
+```
+
+```
